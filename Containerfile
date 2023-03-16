@@ -2,7 +2,7 @@ FROM alpine:3
 
 WORKDIR /app
 
-RUN apk add --no-cache runit
+RUN apk update && apk upgrade && apk add --no-cache runit
 
 RUN mkdir -p /services
 COPY ./containers/services /services
